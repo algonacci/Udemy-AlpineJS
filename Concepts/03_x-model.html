@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="//unpkg.com/alpinejs" defer></script>
+  </head>
+  <body>
+    <div x-data="{name: ''}">
+      <label for="name">Name:</label>
+      <input type="text" x-model="name" />
+      <p x-text="`My name is ${name}`"></p>
+    </div>
+
+    <div x-data="{myColor: ''}">
+      <select x-model="myColor">
+        <option value="">Select a color</option>
+        <option value="Red">Red</option>
+        <option value="Green">Green</option>
+        <option value="Yellow">Yellow</option>
+      </select>
+      <p x-show="myColor" x-text="`My favorite color is ${myColor}`"></p>
+    </div>
+  </body>
+</html>

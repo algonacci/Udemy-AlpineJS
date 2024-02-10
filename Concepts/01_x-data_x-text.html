@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="//unpkg.com/alpinejs" defer></script>
+  </head>
+  <body>
+    <div x-data="{message:'Hello World!'}">
+      <p x-text="message"></p>
+    </div>
+
+    <h1 x-data="{HText: 'This is our heading'}" x-text="HText"></h1>
+
+    <div
+      x-data="{
+        name: 'John',
+        email: 'john@gmail.com',
+        number: 456789
+    }"
+    >
+      <ul>
+        <li x-text="name"></li>
+        <li x-text="email"></li>
+        <li x-text="number"></li>
+      </ul>
+    </div>
+
+    <div x-data="userDetails()">
+      <ul>
+        <li x-text="name"></li>
+        <li x-text="email"></li>
+        <li x-text="number"></li>
+      </ul>
+    </div>
+
+    <script>
+      function userDetails() {
+        return {
+          name: "Eric",
+          email: "eric@gmail.com",
+          number: 45498,
+        };
+      }
+    </script>
+  </body>
+</html>

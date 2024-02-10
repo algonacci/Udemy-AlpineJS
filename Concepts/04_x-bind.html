@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <style>
+      .bold {
+        font-weight: bold;
+      }
+      .green {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div x-data="{myText: 'bold green'}">
+      <p x-bind:class="myText">Lorem ipsum dolor sit.</p>
+    </div>
+
+    <div x-data="{image: 'https://raw.githubusercontent.com/algonacci/Free-CDN/main/TRAVBOT_FULL.png'}">
+      <img x-bind:src="image" width="50" />
+    </div>
+  </body>
+</html>
