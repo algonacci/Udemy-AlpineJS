@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="//unpkg.com/alpinejs" defer></script>
+  </head>
+  <body>
+    <div x-data="{show: true}">
+      <button @click="show = !show">Toggle</button>
+      <template x-if="show">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda pariatur saepe minima velit, praesentium consequatur reprehenderit eaque? Vero, aut fugit?</p>
+      </template>
+    </div>
+  </body>
+</html>
